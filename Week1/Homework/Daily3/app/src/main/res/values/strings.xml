@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="date_of_birth">October 2nd 1992</string>
+    <string name="education">Software Engineer</string>
+    <string name="name">Jose Angel Caballero Preciado</string>
+    <string name="experience">.Net (C#), SqlServer, Web Development</string>
+    <string name="hobbies">I love memes, web surfing, series, movies, video games</string>
+    <string name="bottom_text">Mobile Apps Company Homework</string>
+</resources>

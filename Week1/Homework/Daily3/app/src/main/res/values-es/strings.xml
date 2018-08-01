@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi aplicacion</string>
+    <string name="date_of_birth">2 de octubre de 1992</string>
+    <string name="education">Ingeniero en Software</string>
+    <string name="name">Jose Angel Caballero Preciado</string>
+    <string name="experience">.Net (C#), SqlServer, Desarrollo Web</string>
+    <string name="hobbies">Amo los momazos, surfear por la web, las series, peliculas y videojuegos</string>
+    <string name="bottom_text">Tarea de Mobile Apps Company</string>
+</resources>
