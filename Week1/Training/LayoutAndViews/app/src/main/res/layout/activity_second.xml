@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[VALUE_CASE]"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/tvPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="[PERSON_NAME]"
+        android:textSize="35sp" />
+
+    <TextView
+
+        android:id="@+id/tvPersonGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[PERSON_GENRE]"
+        android:textSize="35sp" />
+
+</LinearLayout>

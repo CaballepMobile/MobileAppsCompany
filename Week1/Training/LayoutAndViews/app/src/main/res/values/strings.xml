@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LayoutAndViews</string>
+
+    <string name="KEY_VALUE1">Android is cool!</string>
+</resources>
