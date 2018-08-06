@@ -3,7 +3,7 @@ package com.example.admin.savingdataactivity;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Person implements Parcelable{
+public class Person implements Parcelable {
 
     public Person(String name, String gender) {
         Name = name;

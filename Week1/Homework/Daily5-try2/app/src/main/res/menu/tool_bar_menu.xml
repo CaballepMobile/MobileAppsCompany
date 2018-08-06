@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/itLike"
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        android:orderInCategory="100"
+        android:title="Like"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/itPlaySound"
+        android:orderInCategory="200"
+        android:title="Play Sound"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/itMore"
+        android:orderInCategory="300"
+        android:title="More"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/itShare"
+                android:title="Share" />
+            <item
+                android:id="@+id/itEvenMore"
+                android:title="Even More">
+                <menu>
+                    <item
+                        android:id="@+id/itTimeSpent"
+                        android:title="Time Spent" />
+                </menu>
+            </item>
+        </menu>
+
+    </item>
+
+</menu>

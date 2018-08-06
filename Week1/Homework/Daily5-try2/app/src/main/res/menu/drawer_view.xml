@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/itDataPersistence"
+            android:icon="@drawable/ic_format_persistence_24dp"
+            android:title="Data Persistence Form" />
+        <item
+            android:id="@+id/itMyLocation"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="My Location" />
+        <item
+            android:id="@+id/itClose"
+            android:icon="@drawable/ic_close_black_24dp"
+            android:title="Close Application" />
+    </group>
+</menu>

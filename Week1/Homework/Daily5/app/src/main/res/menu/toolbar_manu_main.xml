@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itLoveIt"
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        android:orderInCategory="1"
+        android:title="Love it"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/itPlaySound"
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        android:orderInCategory="2"
+        android:title="PlaySound"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/itMore"
+
+        android:title="More">
+
+        <menu>
+            <item
+                android:id="@+id/itTimeSpent"
+                android:title="Time Spent" />
+
+            <item
+                android:id="@+id/itEvenMore"
+                android:title="Even More">
+                <menu>
+                    <item
+                        android:id="@+id/itToastSomething"
+                        android:title="Toast Something" />
+                    <item
+                        android:id="@+id/itPulse"
+                        android:title="Pulse Now" />
+                </menu>
+            </item>
+        </menu>
+
+    </item>
+
+</menu>
