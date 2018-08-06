@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
 
                             case (R.id.itMyLocation):
+                                OpenMyLocation();
                                 break;
 
                             case (R.id.itClose):
@@ -152,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
             item.setIcon(R.drawable.ic_thumb_up_black_24dp);
             like = false;
         }
+    }
+
+    private void OpenMyLocation(){
+        Intent mapsIntent = new Intent(getApplicationContext(), ActivityDictionary.Activities.MAPS_ACTIVITY);
+        startActivity(mapsIntent);
     }
 
     private void Share() {
