@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTesting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnThread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="executeThread"
+        android:text="Start Thread" />
+
+    <Button
+        android:id="@+id/btnRunnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="executeThread"
+        android:text="Start Runnable" />
+
+    <Button
+        android:id="@+id/btnAsyncTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="executeThread"
+        android:text="Start Async Task" />
+
+    <Button
+        android:id="@+id/btnThreadHandlerMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="executeThread"
+        android:text="Using Thread Hanlder" />
+
+    <TextView
+        android:id="@+id/tvThreadHandlerMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+</LinearLayout>
