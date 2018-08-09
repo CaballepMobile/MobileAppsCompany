@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnSaveContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtSaveContact"
+        android:text="Save Contact" />
+
+    <Button
+        android:id="@+id/btnDisplayContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtDisplayContent"
+        android:text="DisplayContent" />
+
+    <WebView
+        android:id="@+id/wvMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
