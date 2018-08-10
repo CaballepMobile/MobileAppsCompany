@@ -49,10 +49,12 @@
             android:textSize="12sp" />
 
         <ImageView
+
             android:id="@+id/ivCelebrity"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_below="@+id/_tvSummary"
+            android:layout_below="@+id/tvSummary"
+
             android:src="@color/colorPrimary" />
 
     </RelativeLayout>
