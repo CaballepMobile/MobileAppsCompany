@@ -8,6 +8,24 @@ public class Celebrity implements Parcelable {
     private String Description;
     private String PictureResFile;
 
+    protected Celebrity(Parcel in) {
+        Name = in.readString();
+        Description = in.readString();
+        PictureResFile = in.readString();
+    }
+
+    public static final Creator<Celebrity> CREATOR = new Creator<Celebrity>() {
+        @Override
+        public Celebrity createFromParcel(Parcel in) {
+            return new Celebrity(in);
+        }
+
+        @Override
+        public Celebrity[] newArray(int size) {
+            return new Celebrity[size];
+        }
+    };
+
     public String getName() {
         return Name;
     }
@@ -45,6 +63,8 @@ public class Celebrity implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
+        parcel.writeString(Name);
+        parcel.writeString(Description);
+        parcel.writeString(PictureResFile);
     }
 }

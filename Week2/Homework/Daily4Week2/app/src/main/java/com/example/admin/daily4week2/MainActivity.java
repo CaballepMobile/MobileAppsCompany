@@ -30,16 +30,17 @@ public class MainActivity extends AppCompatActivity implements OptionsFragment.O
     public void onFragmentInteraction(Celebrity celebrity) {
         Toast.makeText(this, celebrity.getName(), Toast.LENGTH_SHORT).show();
         tvName.setText(celebrity.getName());
-        tvDescription.setText(celebrity.getName());
+        tvDescription.setText(celebrity.getDescription());
+        //Toast.makeText(this, celebrity.getDescription(), Toast.LENGTH_SHORT).show();
         SetImage(celebrity);
     }
 
     private void SetImage(Celebrity celebrity){
-        /*
-        Resources resource = getResources();
+
+        Resources resource = getApplication().getResources();
         String mDrawableName = celebrity.getPictureResFile();
         int resId = resource.getIdentifier(mDrawableName , "drawable", this.getPackageName());
-        Drawable drawable = this.getDrawable(resId);
-        ivCelebrity.setImageDrawable(drawable);*/
+        Drawable drawable = getApplication().getDrawable(resId);
+        ivCelebrity.setImageDrawable(drawable);
     }
 }
