@@ -46,6 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + Animal.SoundPath_TAG + " TEXT"
                 + ")";
         sqLiteDatabase.execSQL(createAnimalTableQuery);
+        
         GenerateDuummyDataSQL(sqLiteDatabase);
     }
 
