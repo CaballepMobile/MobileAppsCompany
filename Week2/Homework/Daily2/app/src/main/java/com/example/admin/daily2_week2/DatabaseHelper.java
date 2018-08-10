@@ -51,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(Employee.EmployeeName_TAG, employee.getEmployeeName());
         contentValues.put(Employee.MonthlySalary_TAG, employee.getMonthlySalary());
-        contentValues.put(Employee.Department_TAG, employee.getMonthlySalary());
+        contentValues.put(Employee.Department_TAG, employee.getDepartment());
         contentValues.put(Employee.ManagerID_TAG, employee.getManagerID());
         int result = (int)database.insert(Employee.TableName_TAG, null, contentValues);
     }

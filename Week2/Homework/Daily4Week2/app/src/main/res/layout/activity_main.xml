@@ -8,15 +8,17 @@
     tools:context=".MainActivity">
 
     <fragment
+        android:name="com.example.admin.daily4week2.OptionsFragment"
         android:id="@+id/fgtOptions"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <fragment
+        android:name="com.example.admin.daily4week2.DetailsFragment"
         android:id="@+id/fgtDetails"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

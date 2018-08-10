@@ -2,9 +2,9 @@
     <string name="app_name">Daily4 Week2</string>
 
     <string-array name="celebrities">
-        <item>Emilia Clarke</item>
-        <item>Tom Holland</item>
-        <item>Linus Torvalds</item>
-        <item>Dennis Ritchie</item>
+        <item>sEmilia Clarke</item>
+        <item>sTom Holland</item>
+        <item>sLinus Torvalds</item>
+        <item>sDennis Ritchie</item>
     </string-array>
 </resources>

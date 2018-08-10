@@ -8,7 +8,7 @@
 
     <TextView
         android:textSize="25sp"
-        android:id="@+id/tvFruit"
+        android:id="@+id/tvItemCelebrity"
         android:text="{Fruit}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

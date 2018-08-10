@@ -8,14 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class OptionsFragment extends Fragment {
 
     ListView lvOptions;
+    ArrayList<Celebrity> celebrities;
 
     public interface OnFragmentInteractionListener {
-        void onFragmentInteraction();
+        void onFragmentInteraction(Celebrity celebrity);
     }
 
     private OnFragmentInteractionListener mListener;
@@ -35,6 +41,13 @@ public class OptionsFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        celebrities = new ArrayList<>();
+        celebrities.add(new Celebrity("Emilia Clarke", "Emilia Clarke is an English actress. Clarke studied at the Drama Centre London and appeared in a number of stage productions. Her television debut came in 2009 with a guest appearance in an episode of the British soap opera Doctors. ", "emilia.png"));
+        celebrities.add(new Celebrity("Tom Holland", "Thomas Stanley Holland is an English actor and dancer. He is best known for playing Spider-Man in the Marvel Cinematic Universe films Captain America: Civil War, Spider-Man: Homecoming, and Avengers: Infinity War.", "tom.png"));
+        celebrities.add(new Celebrity("Linus Torvalds", "Linus Torvalds is the world's most famous computer programmer and also its most famous Finn. He is the founder and coordinator of Linux, the Unix-like operating system that is beginning to revolutionize the computer industry and possibly much else as well. His is truly one of the great tales in the history of the computers.", "linus.png"));
+        celebrities.add(new Celebrity("Dennis Ritchie", "Dennis MacAlistair Ritchie was an American computer scientist. He created the C programming language and, with long-time colleague Ken Thompson, the Unix operating system.", "dennis.png"));
+
     }
 
     @Nullable
@@ -42,13 +55,18 @@ public class OptionsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.options_fragment, container, false);
-        ListView lv = view.findViewById(R.id.lvCelebrities);
+        lvOptions = view.findViewById(R.id.lvCelebrities);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        CelebrityArrayAdapter adapter = new CelebrityArrayAdapter(view.getContext(), celebrities);
+        lvOptions.setAdapter(adapter);
+
+        lvOptions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long i) {
 
+                Celebrity selectedFromList = (Celebrity)(lvOptions.getItemAtPosition(position));
+                mListener.onFragmentInteraction(selectedFromList);
             }
 
         });

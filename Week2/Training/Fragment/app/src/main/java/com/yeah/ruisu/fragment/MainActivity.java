@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         {
             case R.id.btnAddBlue:
                 blueFragment blueFragment =
-                        com.yeah.ruisu.fragment.blueFragment.newInstance("John", "Doe");
+                        new blueFragment();
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.flFrag1, blueFragment, BLUE_FRAGMENT_TAG)
                         .addToBackStack(BLUE_FRAGMENT_TAG)

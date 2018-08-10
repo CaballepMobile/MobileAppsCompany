@@ -1,5 +1,7 @@
 package com.yeah.ruisu.fragment;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -70,4 +72,6 @@ public class YellowFragment extends Fragment
         tvFirstName.setText(mParam1);
         tvLastName.setText(mParam2);
     }
+
+
 }
