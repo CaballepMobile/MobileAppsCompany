@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Super Cosmic [Z]afari"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Super Cosmic Safari, the first and only zoo at the space. We are pround to be the pioneers at this because the only thing that is better than a regular zoo is a zero-gravity zoo in a non profitable enviroment."
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="AnimalImage"
+        android:scaleType="fitXY"
+        android:src="@drawable/animals" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Go to Categories"
+        android:onClick="evtGoToCategoriesActivity"/>
+
+</LinearLayout>

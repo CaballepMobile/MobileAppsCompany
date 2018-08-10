@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/_tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/_tvName"
+            android:text="{NAME}"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/_tvSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/_tvName"
+            android:text="Summary: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_toEndOf="@+id/_tvSummary"
+            android:text="{SUMMARY}"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/_tvSummary"
+            android:src="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</ScrollView>

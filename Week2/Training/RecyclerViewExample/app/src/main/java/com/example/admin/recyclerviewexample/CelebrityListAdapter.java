@@ -1,6 +1,5 @@
 package com.example.admin.recyclerviewexample;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

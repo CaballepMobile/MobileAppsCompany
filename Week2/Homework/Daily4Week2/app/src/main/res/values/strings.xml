@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Daily4 Week2</string>
+
+    <string-array name="celebrities">
+        <item>Emilia Clarke</item>
+        <item>Tom Holland</item>
+        <item>Linus Torvalds</item>
+        <item>Dennis Ritchie</item>
+    </string-array>
+</resources>

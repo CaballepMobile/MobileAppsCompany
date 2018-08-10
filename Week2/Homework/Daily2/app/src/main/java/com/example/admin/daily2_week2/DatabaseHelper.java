@@ -10,10 +10,11 @@ import com.example.admin.daily2_week2.models.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "MyDatabase";
 
 
@@ -45,8 +46,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(createTable);
     }
 
-    public void SaveNewContact(Employee employee){
-        SQLiteDatabase database = this.getWritableDatabase();
+    public void SaveNewEmployee(Employee employee){
+        SQLiteDatabase database = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(Employee.EmployeeName_TAG, employee.getEmployeeName());
         contentValues.put(Employee.MonthlySalary_TAG, employee.getMonthlySalary());
@@ -55,8 +56,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         int result = (int)database.insert(Employee.TableName_TAG, null, contentValues);
     }
 
-    public List<Employee> getContacts(){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+    public List<Employee> getEmployees(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         String query = "SELECT * FROM " + Employee.TableName_TAG;
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
         List<Employee> employees = new ArrayList<>();

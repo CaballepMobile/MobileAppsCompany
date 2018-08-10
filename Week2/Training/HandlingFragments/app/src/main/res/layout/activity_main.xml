@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:onClick="evtAddFragment"
+        android:id="@+id/btnAddRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Red" />
+
+    <Button
+        android:onClick="evtAddFragment"
+        android:id="@+id/btnAddBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Blue" />
+
+    <Button
+        android:onClick="evtRemoveFragment"
+        android:id="@+id/btnRemoveRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove Red" />
+
+    <Button
+        android:onClick="evtRemoveFragment"
+        android:id="@+id/btnRemoveBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AdRemove Blue" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Red Fragment" />
+
+    <FrameLayout
+        android:id="@+id/flRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/flBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blue Fragment" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+</LinearLayout>

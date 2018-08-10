@@ -11,6 +11,13 @@ public class Employee implements Parcelable{
     private double MonthlySalary;
     private int ManagerID;
 
+    public Employee(String employeeName, String department, double monthlySalary, int managerID) {
+        EmployeeName = employeeName;
+        Department = department;
+        MonthlySalary = monthlySalary;
+        ManagerID = managerID;
+    }
+
     public Employee(int employeeID, String employeeName, String department, double monthlySalary, int managerID) {
         EmployeeID = employeeID;
         EmployeeName = employeeName;
