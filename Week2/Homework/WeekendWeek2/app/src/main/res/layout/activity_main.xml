@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Activities:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnGoToPDFViewer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtMainActivityButtonsOnClick"
+        android:text="Go to the PDF Activity" />
+
+    <Button
+        android:id="@+id/btnGoToTwoFragmentCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtMainActivityButtonsOnClick"
+        android:text="Go to the Two Fragment Counter Activity" />
+
+    <TextView
+        android:text="Dialogs / Alerts:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnShowDialogFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="evtMainActivityButtonsOnClick"
+            android:text="Dialog Fragment" />
+
+        <Button
+            android:id="@+id/btnShowDefaultAlert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="evtMainActivityButtonsOnClick"
+            android:text="Default Alert" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnShowCustomAlert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="evtMainActivityButtonsOnClick"
+            android:text="Custom Alert" />
+
+        <Button
+            android:id="@+id/btnShowListAlert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="evtMainActivityButtonsOnClick"
+            android:text="List Alert" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Messaging tool:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:hint="Phone Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:hint="Message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="evtMainActivityButtonsOnClick"
+        android:id="@+id/btnSendMessage"
+        android:text="Send Message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="evtMainActivityButtonsOnClick"
+        android:id="@+id/btnNotifyAndroid"
+        android:text="Notify Android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

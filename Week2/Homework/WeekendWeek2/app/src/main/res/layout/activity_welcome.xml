@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/crazy_bg"
+    android:orientation="vertical"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/tvImportant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="FYI:"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvImportant"
+        android:gravity="center"
+        android:text="Progress Bar fills based on the song, the skip button unlocks after 5 seconds by thread and the activity will automatically skip this screen when the song ends."
+        android:textSize="12sp" />
+
+    <ImageView
+
+        android:id="@+id/ivWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:contentDescription="opening_image"
+        android:src="@drawable/gravity_falls_image" />
+
+    <ProgressBar
+        android:id="@+id/pgrWelcome"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ivWelcome"
+        android:layout_margin="20dp"
+        android:max="25" />
+
+
+    <Button
+        android:enabled="false"
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="@android:color/darker_gray"
+        android:text="SKIP"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

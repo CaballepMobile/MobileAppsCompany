@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Weekend Week2</string>
+
+    <string-array name="avengers_names" >
+        <item>Capitan America</item>
+        <item>Iron Man</item>
+        <item>Thor</item>
+        <item>Black Widow</item>
+        <item>Hulk</item>
+    </string-array>
+
+    <string-array name="pdf_string_names" >
+        <item>android_cheat_sheet</item>
+        <item>reactjs_tutorial</item>
+        <item>android_tutorial</item>
+    </string-array>
+</resources>
