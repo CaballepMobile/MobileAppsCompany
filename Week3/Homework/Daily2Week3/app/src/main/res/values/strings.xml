@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Daily 2 Week 3</string>
+    <string name="save_person">Save person</string>
+    <string name="go_to_people_activity">Go to people activity</string>
+</resources>

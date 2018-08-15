@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivSong"
+        android:layout_width="50dp"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btnPlay_notification_music"
+        android:text="Play"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/TextAppearance.Compat.Notification.Title"/>
+
+    <Button
+        android:id="@+id/btnStop_notification_music"
+        android:text="Stop"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/TextAppearance.Compat.Notification.Title"/>
+
+</LinearLayout>

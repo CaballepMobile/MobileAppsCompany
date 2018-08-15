@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnScheduleService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtService"
+        android:text="Start Schedule Service" />
+
+    <Button
+        android:id="@+id/btnStartNormalService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtService"
+        android:text="Start Service" />
+
+    <Button
+        android:id="@+id/btnStopNormalServuce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtService"
+        android:text="Stop Service" />
+
+    <Button
+        android:id="@+id/btnStartIntentService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtService"
+        android:text="Start Intent Service" />
+
+    <Button
+        android:id="@+id/btnBindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtService"
+        android:text="Bind Service" />
+
+    <Button
+        android:id="@+id/btnUnbindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evtService"
+        android:text="Unbind Service" />
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.admin.weekendweek2;
+ package com.example.admin.weekendweek2;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -16,7 +16,7 @@ public class EasyWelcomeActivity extends AppCompatActivity {
         //Technically, in the manifest this should not be necessary by including the following:
         /*
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-         */
+        */
         //But is not working!
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
