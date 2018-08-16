@@ -41,13 +41,14 @@
         android:id="@+id/btnSavePerson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="GoToContactList"
+        android:onClick="SavePerson"
         android:text="@string/save_person" />
 
     <Button
         android:id="@+id/btnGoToPeopleActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="GoToContactList"
         android:text="@string/go_to_people_activity" />
 
 </LinearLayout>

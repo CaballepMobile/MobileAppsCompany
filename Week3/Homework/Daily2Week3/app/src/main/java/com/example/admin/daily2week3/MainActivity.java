@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String TAG = "MainActivity_LOGTAG";
 
     EditText etName, etLastName, etAge, etGenre;
     Button btnSavePerson, btnGoToPeopleActivity;
@@ -18,10 +22,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_people);
+        setContentView(R.layout.activity_main);
+
+        Log.d(TAG, "onCreate: ");
 
         InitializeViews();
-
         myBroadcastReceiver = new MyBroadcastReceiver();
     }
 
@@ -31,10 +36,6 @@ public class MainActivity extends AppCompatActivity {
         etLastName = findViewById(R.id.etLastName);
         etAge = findViewById(R.id.etAge);
         etGenre = findViewById(R.id.etGenre);
-
-        //btnSavePerson.setOnClickListener(view -> SavePerson());
-
-        //btnGoToPeopleActivity.setOnClickListener(view -> GoToContactList());
     }
 
     public void SavePerson(View view) {
