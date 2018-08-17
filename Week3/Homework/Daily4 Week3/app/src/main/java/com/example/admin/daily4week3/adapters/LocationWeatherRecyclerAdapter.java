@@ -55,13 +55,13 @@ public class LocationWeatherRecyclerAdapter extends RecyclerView.Adapter<Locatio
         com.example.admin.daily4week3.models.List listItem = list.get(position);
         if(listItem != null){
 
-            String icon = listItem.getWeather().get(0).getIcon();
+            //String icon = listItem.getWeather().get(0).getIcon();
             String weather = listItem.getWeather().get(0).getMain();
             String temperature = listItem.getMain().getTemp().toString();
 
             tvMainWeather.setText(weather);
             tvTemperature.setText(temperature);
-            ivTemperature.setImageDrawable(context.getDrawable(context.getResources().getIdentifier(icon, "drawable", context.getPackageName())));
+            //ivTemperature.setImageDrawable(context.getDrawable(context.getResources().getIdentifier("i"+icon, "drawable", context.getPackageName())));
         }
     }
 

@@ -1,5 +1,7 @@
 package com.example.admin.daily4week3.data.remote;
 
+import android.util.Log;
+
 import com.example.admin.daily4week3.constants.WeatherAPIConstants;
 import com.example.admin.daily4week3.models.LocationWeather;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -12,12 +14,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WeatherService {
 
+    private static final String TAG = "WeatherService_LOG";
     //HTTP is the way modern applications network.
     //It’s how we exchange data & media. Doing HTTP efficiently makes your stuff load faster and saves bandwidth.
     private OkHttpClient okHttpClient;
 
     //For the singleton pattern
-    private IWeatherService iWeatherService;
     private static WeatherService INSTANCE;
 
     private WeatherService(){
@@ -47,7 +49,11 @@ public class WeatherService {
 
                 .build();
 
+        //Log.d(TAG, "getWeatherData: Base Url request: " + retrofit.baseUrl());
+        //Log.d(TAG, "getWeatherData: " + okHttpClient.proxy().address().toString());
+        //Log.d(TAG, "getWeatherData: " + okHttpClient.);
+
         IWeatherService service = retrofit.create(IWeatherService.class);
-        return service.getWeatherByZIP(zipCode, WeatherAPIConstants.SERVICE_KEY);
+        return service.getWeatherByZIP(zipCode, "metric", WeatherAPIConstants.SERVICE_KEY);
     }
 }

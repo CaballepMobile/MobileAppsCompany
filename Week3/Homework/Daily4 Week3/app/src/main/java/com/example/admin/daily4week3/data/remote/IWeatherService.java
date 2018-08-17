@@ -8,5 +8,5 @@ import retrofit2.http.Query;
 
 public interface IWeatherService {
     @GET("data/2.5/forecast")
-    Single<LocationWeather> getWeatherByZIP(@Query("zip") String zip, @Query("appid") String appId);
+    Single<LocationWeather> getWeatherByZIP(@Query("zip") String zip, @Query("units") String units, @Query("appid") String appId);
 }

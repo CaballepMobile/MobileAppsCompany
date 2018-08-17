@@ -1,5 +1,6 @@
 package com.example.admin.daily4week3;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.location.LocationManager;
 import android.provider.CalendarContract;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etZip;
     TextView tvCurrentCity;
     LocationWeather locationWeather;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,36 +45,40 @@ public class MainActivity extends AppCompatActivity {
     private void InitializeViews(){
         etZip = findViewById(R.id.etZip);
         tvCurrentCity = findViewById(R.id.tvCurrentCity);
+        recyclerView = findViewById(R.id.rvForecast);
     }
 
+    @SuppressLint("CheckResult")
     private LocationWeather getLocationWeatherByZIP(String zipCode){
 
-        locationWeather = new LocationWeather();
-
         WeatherService weatherService = WeatherService.getWeatherService();
-
         weatherService.getWeatherData(zipCode)
+
+
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                //.observeOn(AndroidSchedulers.mainThread())
 
                 .doOnSuccess(data -> {
 
+                    //I Tried to run in the UI Thread but did not work...
+                    Log.d(TAG, "getLocationWeatherByZIP: " + data.getCity().getName().toString());
                     locationWeather = data;
-
 
                 }).subscribe(data -> Log.d(TAG, "MakeOkHttpCallRetrofitRx: "), Throwable::printStackTrace);
 
+
         try {
-            Thread.sleep(100);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         return locationWeather;
     }
 
     private void fillRecyclerView(LocationWeather locationWeather){
 
-        RecyclerView recyclerView = findViewById(R.id.rvForecast);
+        recyclerView = findViewById(R.id.rvForecast);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
         LocationWeatherRecyclerAdapter locationWeatherRecyclerAdapter = new LocationWeatherRecyclerAdapter(locationWeather.getList());
@@ -87,17 +93,24 @@ public class MainActivity extends AppCompatActivity {
         String zipCode = etZip.getText().toString();
         if(zipCode.matches("[0-9]+") && zipCode.length() > 4){
 
+            //locationWeather = getLocationWeatherByZIP(etZip.getText().toString());
+            WeatherService.getWeatherService()
+                    .getWeatherData(zipCode)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(locationWeather1 ->{
+                        String cityStateName = locationWeather1.getCity().getName() + ", " + locationWeather1.getCity().getCountry();
+                        tvCurrentCity.setText(cityStateName);
+                        fillRecyclerView(locationWeather1);
+                    }, Throwable::printStackTrace);
 
-            locationWeather = getLocationWeatherByZIP(etZip.getText().toString());
+//            String city = locationWeather.getCity().getName();
+//            String country = locationWeather.getCity().getCountry();
 
-            String city = locationWeather.getCity().getName();
-            String country = locationWeather.getCity().getCountry();
-
-            String cityStateName = locationWeather.getCity().getName() + ", " + locationWeather.getCity().getCountry();
-            tvCurrentCity.setText(cityStateName);
+            //String cityStateName = locationWeather.getCity().getName() + ", " + locationWeather.getCity().getCountry();
+            //tvCurrentCity.setText(cityStateName);
 
 
-            fillRecyclerView(locationWeather);
 
         }else{
             new Thread(()->{
