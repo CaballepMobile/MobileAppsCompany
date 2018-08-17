@@ -14,14 +14,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "DataBaseHelper";
 
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 6;
     private static final String DATABASE_NAME = "MyDataBase";
 
-    public static final String TABLE_NAME = "Contacts";
+    public static final String TABLE_NAME = "People";
     public static final String PERSON_NAME = "Name";
-    public static final String PERSON_LASTNAME = "Number";
-    public static final String PERSON_AGE = "Name";
-    public static final String PERSON_GENRE = "Number";
+    public static final String PERSON_LASTNAME = "LastName";
+    public static final String PERSON_AGE = "Age";
+    public static final String PERSON_GENRE = "Genre";
 
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
