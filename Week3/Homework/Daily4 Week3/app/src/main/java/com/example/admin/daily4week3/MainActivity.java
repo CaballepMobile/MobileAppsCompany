@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(itemAnimator);
     }
 
+    @SuppressLint("CheckResult")
     public void evtFindWeatherByZip(View view) {
 
         String zipCode = etZip.getText().toString();

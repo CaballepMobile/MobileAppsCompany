@@ -1,5 +1,6 @@
 package com.example.admin.restcallsexample;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -123,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("CheckResult")
     public void MakeOkHttpCallRetrofitSync(View view) {
 
         RemoteServiceHelper remoteServiceHelper = RemoteServiceHelper.getINSTANCE();
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSuccess((data) -> {
                     Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
-                }).subscribe(data -> tvText.setText(data.getCity().getName() + " " + data.getCity().getPopulation()), Throwable::printStackTrace);
+                    }).subscribe(data -> tvText.setText(data.getCity().getName() + " " + data.getCity().getPopulation()), Throwable::printStackTrace);
     }
 
     public void MakeOkHttpCallRetrofitASync(View view) {
@@ -168,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("CheckResult")
     public void MakeOkHttpCallRetrofitRx(View view) {
 
         RemoteServiceHelper remoteServiceHelper = RemoteServiceHelper.getINSTANCE();
