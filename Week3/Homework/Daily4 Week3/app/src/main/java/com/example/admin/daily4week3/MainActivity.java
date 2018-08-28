@@ -111,8 +111,6 @@ public class MainActivity extends AppCompatActivity {
             //String cityStateName = locationWeather.getCity().getName() + ", " + locationWeather.getCity().getCountry();
             //tvCurrentCity.setText(cityStateName);
 
-
-
         }else{
             new Thread(()->{
                 runOnUiThread(()->{
