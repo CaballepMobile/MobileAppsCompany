@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.caballep.bbvacompass">
-
-
+    package="com.example.caballep.firebaseexamplekotlin">
 
     <application
         android:allowBackup="true"
